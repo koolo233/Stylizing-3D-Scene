@@ -285,9 +285,9 @@ def log_view_to_tb(writer, global_step, log_data, gt_img, style_img, mask, prefi
 
 def setup(rank, world_size):
     os.environ['MASTER_ADDR'] = 'localhost'
-    # port = np.random.randint(12355, 12399)
-    # os.environ['MASTER_PORT'] = '{}'.format(port)
-    os.environ['MASTER_PORT'] = "12357"
+    port = np.random.randint(12355, 12399)
+    os.environ['MASTER_PORT'] = '{}'.format(port)
+    # os.environ['MASTER_PORT'] = "12357"
     # initialize the process group
     torch.distributed.init_process_group("gloo", rank=rank, world_size=world_size)
 
