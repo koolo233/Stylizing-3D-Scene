@@ -2,9 +2,9 @@
 # N_style = 81330
 stage = second
 datadir = ./llff
-first_stage_weight = ./logs/horns_first_stage/model_250000.pth
-scene = horns
-expname = horns_second_stage
+first_stage_weight = ./logs/trex_first_stage/model_250000.pth
+scene = trex
+expname = trex_second_stage
 basedir = ./logs
 config = None
 ckpt_path = None

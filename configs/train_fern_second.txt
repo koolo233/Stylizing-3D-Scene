@@ -2,7 +2,7 @@
 # N_style = 81330
 stage = second
 datadir = ./llff
-first_stage_weight = ./logs/fern_first_stage/fern_first_250000.pth
+first_stage_weight = ./logs/fern_first_stage/model_250000.pth
 scene = fern
 expname = fern_second_stage
 basedir = ./logs

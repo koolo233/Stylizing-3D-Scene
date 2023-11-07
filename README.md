@@ -1,3 +1,23 @@
+
+# TODO List
+
+- [ ] horns - first stage: `CUDA_VISIBLE_DEVICES=0 python ddp_train_nerf.py --config configs/train_horns_first.txt`
+- [ ] horns - first stage: `CUDA_VISIBLE_DEVICES=0 python ddp_train_nerf.py --config configs/train_horns_second.txt`
+- [ ] fern - first stage: `CUDA_VISIBLE_DEVICES=0 python ddp_train_nerf.py --config configs/train_fern_first.txt`
+- [ ] fern - first stage: `CUDA_VISIBLE_DEVICES=0 python ddp_train_nerf.py --config configs/train_fern_second.txt`
+- [ ] flower - first stage: `CUDA_VISIBLE_DEVICES=0 python ddp_train_nerf.py --config configs/train_flower_first.txt`
+- [ ] flower - first stage: `CUDA_VISIBLE_DEVICES=0 python ddp_train_nerf.py --config configs/train_flower_second.txt`
+- [ ] orchids - first stage: `CUDA_VISIBLE_DEVICES=0 python ddp_train_nerf.py --config configs/train_orchids_first.txt`
+- [ ] orchids - first stage: `CUDA_VISIBLE_DEVICES=0 python ddp_train_nerf.py --config configs/train_orchids_second.txt`
+- [ ] trex - first stage: `CUDA_VISIBLE_DEVICES=0 python ddp_train_nerf.py --config configs/train_trex_first.txt`
+- [ ] trex - first stage: `CUDA_VISIBLE_DEVICES=0 python ddp_train_nerf.py --config configs/train_trex_second.txt`
+- [ ] room - first stage: `CUDA_VISIBLE_DEVICES=0 python ddp_train_nerf.py --config configs/train_room_first.txt`
+- [ ] room - first stage: `CUDA_VISIBLE_DEVICES=0 python ddp_train_nerf.py --config configs/train_room_second.txt`
+- [ ] leaves - first stage: `CUDA_VISIBLE_DEVICES=0 python ddp_train_nerf.py --config configs/train_leaves_first.txt`
+- [ ] leaves - first stage: `CUDA_VISIBLE_DEVICES=0 python ddp_train_nerf.py --config configs/train_leaves_second.txt`
+- [ ] fortress - first stage: `CUDA_VISIBLE_DEVICES=0 python ddp_train_nerf.py --config configs/train_fortress_first.txt`
+- [ ] fortress - first stage: `CUDA_VISIBLE_DEVICES=0 python ddp_train_nerf.py --config configs/train_fortress_second.txt`
+
 # Stylizing-3D-Scene
 PyTorch implementaton of our WACV 2022 paper "Stylizing 3D Scene via Implicit Representation and HyperNetwork".
 You can visit our project website [here](https://ztex08010518.github.io/3dstyletransfer/).
