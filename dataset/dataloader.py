@@ -11,7 +11,15 @@ image_size_table ={
     "tat_intermediate_Family": [1084, 1957],
     "tat_intermediate_Francis": [1086, 1959],
     "tat_intermediate_Horse": [1084, 1958],
-    "tat_training_Truck": [546, 980]
+    "tat_training_Truck": [546, 980],
+    "fern": [747, 996],
+    "flower": [704, 939],
+    "fortress": [752, 1004],
+    "horns": [751, 1002],
+    "leaves": [749, 999],
+    "orchids": [751, 1002],
+    "room": [747, 997],
+    "trex": [750, 1001]
 }
 
 def load_data_split(basedir, scene, split, try_load_min_depth=True, only_img_files=False, seed=None):
