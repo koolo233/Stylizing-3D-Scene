@@ -16,7 +16,8 @@ if __name__ == "__main__":
     for style_name in tqdm(os.listdir(train_styles_folder)):
         image_path = os.path.join(train_styles_folder, style_name)
         try:
-            img = Image.open(image_path).convert('RGB')
+            with Image.open(image_path).convert('RGB'):
+                pass
         except:
             print(image_path)
             os.system(f"rm {image_path}")
