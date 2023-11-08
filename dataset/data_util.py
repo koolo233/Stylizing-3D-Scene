@@ -97,7 +97,7 @@ class RaySamplerSingleImage(object):
         return self.img.reshape((self.H, self.W, 3))
 
     def get_style_img(self):
-        return imageio.imread(self.style_img_path)[..., :3].astype(np.float32) / 255.0
+        return np.array(Image.open(self.style_img_path).convert('RGB')).astype(np.float32) / 255.0
         
     def get_style_input(self, mode=None, test_seed=None, style_ID=None):
         if mode == "test":
@@ -109,8 +109,11 @@ class RaySamplerSingleImage(object):
                 self.style_img_path = random.sample(self.style_imgs, 1)[0]
         else:
             self.style_img_path = np.random.choice(self.style_imgs, 1)[0]
-        
-        ori_style_img = Image.open(self.style_img_path).convert('RGB')
+
+        try:
+            ori_style_img = Image.open(self.style_img_path).convert('RGB')
+        except:
+            print("Cannot open style image: ", self.style_img_path)
         style_img = data_transform(ori_style_img)
         style_idx = torch.from_numpy(np.array([self.style_imgs.index(self.style_img_path)]))
         
