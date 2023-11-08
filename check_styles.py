@@ -2,6 +2,9 @@ import os
 from PIL import Image
 from tqdm import tqdm
 
+import warnings
+warnings.filterwarnings('error')
+
 
 if __name__ == "__main__":
     train_styles_folder = "./wikiart/train"
