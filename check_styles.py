@@ -1,6 +1,7 @@
 import os
 from PIL import Image
 from tqdm import tqdm
+import numpy as np
 
 import warnings
 warnings.filterwarnings('error')
@@ -16,7 +17,10 @@ if __name__ == "__main__":
     for style_name in tqdm(os.listdir(train_styles_folder)):
         image_path = os.path.join(train_styles_folder, style_name)
         try:
-            with Image.open(image_path).convert('RGB'):
+            with Image.open(image_path).convert('RGB') as img:
+                if np.shape(img)[-1] == 2:
+                    print(image_path)
+                    os.system(f"rm {image_path}")
                 pass
         except:
             print(image_path)
@@ -26,7 +30,10 @@ if __name__ == "__main__":
     for style_name in tqdm(os.listdir(test_styles_folder)):
         image_path = os.path.join(test_styles_folder, style_name)
         try:
-            img = Image.open(image_path).convert('RGB')
+            with Image.open(image_path).convert('RGB') as img:
+                if np.shape(img)[-1] == 2:
+                    print(image_path)
+                    os.system(f"rm {image_path}")
         except:
             print(image_path)
             os.system(f"rm {image_path}")
@@ -35,7 +42,10 @@ if __name__ == "__main__":
     for style_name in tqdm(os.listdir(val_styles_folder)):
         image_path = os.path.join(val_styles_folder, style_name)
         try:
-            img = Image.open(image_path).convert('RGB')
+            with Image.open(image_path).convert('RGB') as img:
+                if np.shape(img)[-1] == 2:
+                    print(image_path)
+                    os.system(f"rm {image_path}")
         except:
             print(image_path)
             os.system(f"rm {image_path}")
